@@ -1,0 +1,118 @@
+.m-textfield {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    height: max-content;
+    box-sizing: border-box;
+}
+
+.m-textfield:has(.error-message) input {
+    border: 1px solid #e60000 !important;
+}
+
+.m-textfield-label {
+    font-family: Roboto-Medium;
+    width: fit-content;
+}
+
+.required span {
+    color: red;
+}
+
+/* Input không có action kèm theo */
+.m-textfield .m-textfield-input {
+    padding: 0px 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+.m-textfield input:hover {
+    background-color: var(--textfield-hover-color);
+}
+
+.m-textfield .m-textfield-input:focus {
+    border: 1px solid var(--primary-color);
+    cursor: text;
+}
+
+/* Input With Action */
+.m-textfield-wac {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.m-textfield-wac:hover {
+    background-color: var(--textfield-hover-color);
+}
+
+.m-textfield-wac input {
+    border: unset;
+    background-color: inherit;
+    cursor: unset;
+    padding-left: 12px;
+    flex: 1;
+    box-sizing: border-box;
+    border-radius: 4px 0 0 4px;
+}
+
+.m-textfield-wac:has(> input:focus) {
+    border: 1px solid var(--primary-color);
+}
+
+.m-textfield-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 4px 4px 0;
+}
+
+.m-textfield-icon:hover {
+    background-color: #e0e0e0;
+}
+
+.m-textfield-wac:has(.m-textfield-icon:hover) {
+    background-color: #fff;
+}
+
+.m-textfield-icon span {
+    background-image: url(@/assets/icon/search1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    border: unset;
+}
+
+/* .m-textfield-wac:has(> input:focus) .m-textfield-icon {
+    background-color: #e0e0e0;
+} */
+
+.m-textfield .error-message {
+    width: 100%;
+    color: #e60000;
+    font-size: 12px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}

@@ -1,0 +1,120 @@
+.m-toast-message {
+    background-color: #fff;
+    max-width: 400px;
+    min-width: 300px;
+    height: max-content;
+    min-height: 56px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+}
+
+.m-toast-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: transparent;
+    position: fixed;
+    z-index: 99999;
+    bottom: 15px;
+    right: 15px;
+}
+
+@keyframes slide-from-right {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 15px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.m-toast-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+}
+
+.m-toast-title {
+    flex: 1;
+}
+
+.m-toast-title p {
+    width: 100%;
+    text-wrap: wrap;
+}
+
+.m-toast-message {
+    animation: slide-from-right ease-in 0.3s;
+}
+
+.m-toast-message.fade-out {
+    animation: fadeOut linear 0.3s;
+}
+
+.m-toast-message .close-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.m-toast-message .close-icon span {
+    height: 20px;
+    width: 20px;
+    background-image: url(@/assets/icon/close_red-24.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.toast-success .m-toast-icon span {
+    height: 20px;
+    width: 20px;
+    background-image: url(@/assets/icon/success.png);
+    background-size: contain;
+}
+
+.toast-error .m-toast-icon span {
+    height: 20px;
+    width: 20px;
+    background-image: url(@/assets/icon/cross_red.png);
+    background-size: contain;
+}
+
+.toast-warning .m-toast-icon span {
+    height: 20px;
+    width: 20px;
+    background-image: url(@/assets/icon/warning.png);
+    background-size: contain;
+}
+
+.toast-info .m-toast-icon span {
+    height: 20px;
+    width: 20px;
+    background-image: url(@/assets/icon/info.png);
+    background-size: cover;
+}
+
+.toast-default .m-toast-icon span {
+    height: 20px;
+    width: 20px;
+    background-image: url(@/assets/icon/question_red.png);
+    background-size: contain;
+}

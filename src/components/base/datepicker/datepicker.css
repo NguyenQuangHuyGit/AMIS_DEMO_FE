@@ -1,0 +1,50 @@
+.m-date-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.m-textfield-label {
+    font-family: Roboto-Medium;
+    width: fit-content;
+}
+
+.required span {
+    color: red;
+}
+
+.m-date-picker:has(.error-message) .m-date-picker-input {
+    border: 1px solid #e60000 !important;
+}
+
+.m-date-picker-input {
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.m-date-picker-input.ant-picker-focused {
+    border: 1px solid var(--primary-color) !important;
+    box-shadow: none !important;
+}
+
+.m-date-picker-input:hover {
+    background-color: var(--textfield-hover-color);
+    border: 1px solid var(--border-color);
+}
+
+.m-date-picker-input:active {
+    border: 1px solid var(--primary-color);
+    cursor: not-allowed;
+}
+
+.ant-picker-dropdown .ant-picker-today-btn {
+    color: var(--primary-color) !important;
+}
+
+.error-message {
+    width: 100%;
+    color: #e60000;
+    font-size: 12px;
+}

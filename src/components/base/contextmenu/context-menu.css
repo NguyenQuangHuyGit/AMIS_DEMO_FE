@@ -1,0 +1,40 @@
+.m-context-menu-container {
+    width: max-content;
+    position: absolute;
+    right: 0;
+    top: 22px;
+    background-color: #fff;
+    z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+}
+
+.reverse-context {
+    top: -128px;
+}
+
+.m-context-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.m-context-menu-item:hover {
+    color: #50b83c;
+    background-color: #eeeeee;
+}
+
+.m-context-menu-item p {
+    color: #000;
+}
+
+.m-context-menu-item span {
+    width: 24px;
+    height: 24px;
+}

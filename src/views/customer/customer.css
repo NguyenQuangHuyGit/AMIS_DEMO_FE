@@ -1,0 +1,209 @@
+/* Phần tiêu đề của main content */
+.main-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.main-top-title {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.main-top-title p {
+    font-size: 24px;
+    font-family: Roboto-Bold;
+}
+
+.main-top-title span {
+    padding: 7px;
+    width: 25px;
+    height: 24px;
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+/* Phần chứa button thao tác */
+.main-top-action {
+    display: flex;
+    gap: 12px;
+}
+
+/* Phần chính chứa bảng dữ liệu của main-content */
+.main-body {
+    height: calc(100% - 68px + 24px);
+    padding: 0 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+}
+
+/* Phần thao táo với bảng dữ liệu */
+.table-toolbar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.table-toolbar-left {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.table-toolbar-right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.table-toolbar-left .btn-delete {
+    background-color: #bdbdbd;
+}
+
+.table-toolbar-left .btn-delete:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.table-toolbar-left .btn-delete:active {
+    color: #fff;
+    background-color: #757575;
+}
+
+.table-toolbar-left .btn-delete span {
+    background-image: url(@/assets/icon/delete.png);
+}
+
+.table-toolbar-left .btn-cancel {
+    color: #eb3333;
+    background-color: inherit;
+    border: unset;
+}
+
+.table-toolbar-left .btn-cancel:hover {
+    background-color: inherit;
+    color: #f59999;
+}
+
+.table-toolbar-left .btn-cancel:active {
+    border: unset;
+    color: #b80000;
+}
+
+.table-toolbar-right .btn-import:hover {
+    background-color: #eef8ec;
+}
+
+.table-toolbar-right .btn-import span {
+}
+
+.table-toolbar-right .btn-import:active {
+    background-color: #409330;
+}
+
+.table-toolbar-right .btn-import:active span {
+    background-color: #409330;
+}
+
+.table-toolbar-right .btn-refresh {
+    background-color: #e0e0e0;
+}
+
+.table-toolbar-right .btn-refresh:hover {
+    background-color: #eeeeee;
+}
+
+.table-toolbar-right .btn-refresh span {
+}
+
+.table-toolbar-right .btn-refresh:active {
+    background: #bdbdbd;
+}
+
+.table-toolbar-right .menu-col {
+    position: relative;
+}
+
+/* Phần chứa bảng dữ liệu */
+.main-body-content {
+    height: calc(100% - 130px);
+}
+
+/* Phần dưới cùng của main-content */
+.table-footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 32px);
+    height: 56px;
+    box-sizing: border-box;
+    border-top: 1px solid var(--border-color);
+}
+
+.table-total-record {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto-Medium;
+}
+
+.table-total-record span,
+.table-total-record p {
+    font-family: inherit;
+}
+
+.table-container {
+    height: calc(100% - 2px);
+    padding-bottom: 8px;
+    background-color: #fff;
+    overflow: auto;
+    overflow-x: auto;
+    width: 100%;
+    height: 433px;
+}
+
+.table-pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.m-dropdown-page input {
+    padding-right: 20px;
+}
+
+.pagination-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-page-prev,
+.btn-page-next {
+    padding: 2px;
+    width: 24px;
+    height: 24px;
+    background-clip: content-box;
+    background-size: contain;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.btn-page-prev {
+    background-image: url(@/assets/icon/btn-prev-page.svg);
+}
+
+.btn-page-next {
+    background-image: url(@/assets/icon/btn-next-page.svg);
+}

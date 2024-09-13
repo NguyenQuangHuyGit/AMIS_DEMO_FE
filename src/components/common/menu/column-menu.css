@@ -1,0 +1,171 @@
+.menu-setting-column {
+    position: absolute;
+    width: 300px;
+    background-color: #fff;
+    z-index: 10;
+    top: 40px;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 4px;
+    min-height: 470px;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    height: 200px;
+    animation: appear 0.2s ease-out;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.menu-header {
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.menu-title {
+    font-family: Roboto-Bold;
+    font-size: 18px;
+    width: fit-content;
+}
+
+.menu-body {
+    position: relative;
+    overflow-y: auto;
+    flex: 1;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+}
+
+.menu-item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 12px;
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.menu-item-temp {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+}
+
+.menu-body.is-darging .menu-item:not(.drag-item) {
+    transition: top 0.5s;
+}
+
+.menu-item.drag-item {
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.menu-item.drag-item .menu-item-icon .icon-pin,
+.menu-item.drag-item .menu-item-icon .icon-move {
+    visibility: visible;
+}
+
+.menu-item .column-name {
+    flex: 1;
+    text-align: left;
+}
+
+.menu-body:not(.is-darging) .menu-item:hover .menu-item-icon .icon-pin,
+.menu-body:not(.is-darging) .menu-item:hover .menu-item-icon .icon-move {
+    visibility: visible;
+}
+
+.menu-body.is-darging {
+    cursor: grabbing;
+}
+
+.menu-item.pin-col .menu-item-icon .icon-pin {
+    visibility: visible;
+}
+
+.menu-body:not(.is-darging) .menu-item:not(.drag-item):hover {
+    background-color: #eef8ec;
+}
+
+.menu-item input {
+    width: 16px;
+    height: 16px;
+    accent-color: #409330;
+    cursor: pointer;
+}
+
+.menu-item-icon {
+    width: fit-content;
+    display: flex;
+    gap: 6px;
+}
+
+.menu-item-icon .icon-pin {
+    visibility: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+}
+
+.menu-item-icon .icon-pin span {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-image: url(@/assets/icon/thumbtacks.png);
+}
+
+.menu-item-icon .icon-pin.active-pin span {
+    background-image: url(@/assets/icon/thumbtacks_active.png);
+}
+
+.menu-body.is-darging .menu-item-icon .icon-move {
+    cursor: grabbing;
+}
+
+.menu-item-icon .icon-move {
+    visibility: hidden;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+}
+
+.menu-item-icon .icon-move span {
+    width: 20px;
+    height: 20px;
+    background-image: url(@/assets/icon/drag-and-drop.png);
+    background-size: contain;
+}
+
+.menu-footer {
+    margin-top: 16px;
+    height: 56px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    padding: 0 16px;
+    box-sizing: border-box;
+}

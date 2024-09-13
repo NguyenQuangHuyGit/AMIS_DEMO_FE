@@ -1,0 +1,17 @@
+.import-aside-item {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: 36px;
+    border: 1px solid var(--border-color);
+    width: 160px;
+    padding: 0 12px;
+}
+
+.import-aside-item p {
+    font-family: Roboto-Bold;
+}
+
+.active-step {
+    background-color: #cce4ff;
+}

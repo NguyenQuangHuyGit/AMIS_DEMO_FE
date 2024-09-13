@@ -1,0 +1,149 @@
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background-image: url(../../../public/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    position: relative;
+    padding: 32px;
+    width: 380px;
+    height: max-content;
+    background-color: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-top: 0;
+}
+
+.login-logo {
+    margin: 34px 0;
+    height: 35px;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(@/assets/icon/icon-amis-platform2.svg);
+}
+
+.login-controller {
+    width: 100%;
+}
+
+.login-controller form {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-input-username input,
+.login-input-password input {
+    height: 40px;
+}
+
+.login-fail-message {
+    color: #e60000;
+    padding: 5px 0;
+}
+
+.login-forgot-password {
+    /* color: #0062cc; */
+    color: var(--primary-color);
+    cursor: pointer;
+    width: fit-content;
+}
+
+.login-button {
+    margin-top: 12px;
+    height: 40px;
+}
+
+.login-divide {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.login-divide div {
+    flex: 1;
+    border-top: 1px solid var(--textfield-placeholder-color);
+}
+
+.login-divide p {
+    padding: 0 6px;
+    color: var(--textfield-placeholder-color);
+}
+
+.login-other-method {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.login-other-method div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.login-other-method div:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.login-google {
+    background-image: url(@/assets/icon/icon-google.svg);
+}
+
+.login-apple {
+    background-image: url(@/assets/icon/icon-apple.svg);
+}
+
+.login-microsoft {
+    background-image: url(@/assets/icon/icon-microsoft.svg);
+}
+
+.copyright-product {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: -28px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.lang-container {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 4px;
+    width: 120px;
+}
+
+.contextLangMenu {
+    top: 39px;
+    width: 100%;
+}
+
+.lang-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+}
+
+.lang-button.EN span {
+    background-image: url(@/assets/icon/united-kingdom-24.png);
+}
+
+.lang-button.VN span {
+    background-image: url(@/assets/icon/vietnam-24.png);
+}

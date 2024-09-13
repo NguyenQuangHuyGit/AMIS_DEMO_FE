@@ -1,0 +1,170 @@
+.import-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 12px;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.import-title {
+    font-family: Roboto-Bold;
+    padding: 10px 0;
+}
+
+.import-layout {
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+
+.import-aside {
+    width: max-content;
+    background-color: #f5f5f5;
+    height: 100%;
+    padding-right: 6px;
+}
+
+.import-main {
+    position: relative;
+    width: calc(100% - 200px);
+    flex: 1;
+    border: 2px solid var(--border-color);
+    padding: 12px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.import-footer {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.import-footer-left,
+.import-footer-right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 100%;
+    gap: 6px;
+}
+
+.import-field {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-name {
+    color: black;
+    width: 400px;
+    padding: 0 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+}
+
+.btn-file-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto-Bold;
+    cursor: pointer;
+    height: 36px;
+    border-radius: 4px;
+    min-width: 80px;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.btn-file-input:hover {
+    background-color: var(--secondary-btn-hover-color);
+}
+
+.btn-file-input:active {
+    border: 1px solid var(--secondary-btn-active-color);
+    background-color: var(--secondary-btn-active-color);
+    color: #1f1f1f;
+}
+
+.example-load {
+    color: #007aff;
+    cursor: pointer;
+}
+
+.record-status-info {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 12px;
+}
+
+.record-status-info p {
+    font-family: Roboto-Bold;
+}
+
+.table-container {
+    background-color: #fff;
+    overflow: auto;
+    width: 100%;
+    height: calc(100vh - 190px);
+}
+
+.import-data-error-container {
+    margin: 0;
+    padding-left: 15px;
+}
+
+.import-data-error {
+    font-size: 12px;
+    color: #e60000;
+    text-align: left;
+}
+
+.import-data-valid {
+    text-align: left;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.notification-error {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+}
+
+.notification-error span {
+    color: #007aff;
+    cursor: pointer;
+}
+
+.import-result {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.import-result-title {
+    font-size: 24px;
+    font-family: Roboto-Bold;
+}
+
+.import-result-download span {
+    color: #007aff;
+    cursor: pointer;
+}
+
+.import-result-container {
+    margin: 0;
+}
+
+.import-result-container li {
+    margin-bottom: 6px;
+}

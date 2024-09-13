@@ -1,0 +1,4 @@
+- Cập nhật khả năng xử lý khi bỏ ghim
+- Cửa sổ xác nhận thao tác nhiều với danh sách các bản ghi bị tác động
+- Nâng cấp max tính năng nhập khẩu với 4 bước chuẩn
+- Tính năng đăng kí

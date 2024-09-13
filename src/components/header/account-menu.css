@@ -1,0 +1,167 @@
+.account-menu {
+    padding-top: 24px;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #fff;
+    z-index: 10;
+    align-items: center;
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    animation: appear-slow ease-out 0.3s;
+    cursor: pointer;
+}
+
+@keyframes appear-slow {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.account-menu::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0px;
+    right: 0;
+    top: 0;
+    border: 10px solid transparent;
+    border-top: 0;
+    border-bottom: 10px solid var(--primary-color);
+    transform: translate(-45%, calc(-100% + 1px));
+    z-index: 10;
+}
+
+.account-menu-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.account-menu-info .avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(@/assets/icon/avatar-64.png);
+}
+
+.account-menu-info .user-info .fullname {
+    font-family: Roboto-Bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.account-menu-info .user-info .username {
+    font-size: 13px;
+    text-align: center;
+}
+
+.account-menu-action {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.account-menu-item {
+    display: flex;
+    padding: 0 24px;
+    gap: 12px;
+    height: 40px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.account-menu-item:hover {
+    background-color: #f2f2f2;
+}
+
+.account-menu-item .item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+}
+
+.item-icon span {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.logout-btn {
+    padding: 0;
+    border: unset;
+    background-color: #fff;
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+    height: 48px;
+}
+
+.logout-btn .account-menu-item {
+    justify-content: center;
+}
+
+.action-language .m-dropdown-label {
+    cursor: pointer;
+}
+
+.action-language .m-dropdown-textfield {
+    padding: 0;
+    border: none;
+    background-color: inherit;
+}
+
+.action-language .m-dropdown-textfield input {
+    border: none;
+    width: 65px;
+}
+
+.action-language .m-dropdown-option {
+    width: 150px;
+}
+
+.action-language .m-dropdown-label {
+    font-family: Roboto;
+}
+
+.action-password .item-icon span {
+    background-image: url(@/assets/icon/key-24.png);
+}
+
+.action-user-account .item-icon span {
+    background-image: url(@/assets/icon/user-24.png);
+}
+
+.action-security .item-icon span {
+    background-image: url(@/assets/icon/security-24.png);
+}
+
+.action-policy .item-icon span {
+    background-image: url(@/assets/icon/policy-24.png);
+}
+
+.action-gift .item-icon span {
+    background-image: url(@/assets/icon/gift-24.png);
+}
+
+.action-exit .item-icon span {
+    background-image: url(@/assets/icon/exit-24.png);
+}
+
+.action-language-VN .item-icon span {
+    background-image: url(@/assets/icon/vietnam-24.png);
+}
+
+.action-language-EN .item-icon span {
+    background-image: url(@/assets/icon/united-kingdom-24.png);
+}

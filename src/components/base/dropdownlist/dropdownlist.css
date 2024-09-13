@@ -1,0 +1,173 @@
+.m-dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.m-dropdown.m-row-label {
+    display: flex;
+    flex-direction: row;
+}
+
+.m-row-label .m-dropdown-label {
+    display: flex;
+    width: fit-content;
+    text-wrap: nowrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.m-dropdown-label {
+    font-family: Roboto-Medium;
+}
+
+.m-dropdown-container {
+    position: relative;
+    width: 100%;
+}
+
+.m-dropdown-textfield {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 0 8px 0 12px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.m-dropdown-textfield input {
+    height: 36px;
+    background-color: inherit;
+    min-width: 0;
+    cursor: unset;
+    padding: unset;
+}
+
+.m-dropdown-textfield:hover {
+    background-color: var(--textfield-hover-color);
+}
+
+.m-dropdown-focus {
+    border: 1px solid var(--primary-color);
+}
+
+.dropdown-icon {
+    background-image: url(@/assets/icon/dropdown.png);
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    rotate: 0;
+    transition: 0.3s linear;
+}
+
+.reverse .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.rotate {
+    rotate: 180deg;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.m-dropdown-option {
+    display: flex;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: absolute;
+    z-index: 9999;
+    transition: all 0.5s ease;
+    animation: slideDown 0.3s ease-out;
+}
+
+.m-dropdown-value:not(.selected-option).disabled-option {
+    opacity: 56%;
+    cursor: not-allowed;
+}
+
+.reverse .m-dropdown-option {
+    flex-direction: column-reverse;
+    bottom: 40px;
+}
+
+.non-reverse .m-dropdown-option {
+    flex-direction: column;
+    top: 40px;
+}
+
+.m-dropdown-option .selected-item {
+    background-color: #eef8ec;
+}
+
+.m-dropdown-value {
+    position: relative;
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.m-dropdown-value.selected-option span {
+    padding-right: 8px;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(@/assets/icon/checkmark.png);
+}
+
+.m-dropdown-value:not(.disabled-option):hover {
+    background-color: #eef8ec;
+}
+
+.active-field {
+    border: 1px solid var(--primary-color);
+}
+
+.selected-option {
+    color: var(--primary-color);
+}
+
+.required span {
+    color: red;
+}
+
+.m-dropdown-wc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 4px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.m-dropdown-wc span {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

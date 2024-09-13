@@ -1,0 +1,377 @@
+/* Phần tiêu đề của main content */
+.main-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.main-top-title {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.main-top-title p {
+    font-size: 24px;
+    font-family: Roboto-Bold;
+}
+
+.main-top-title span {
+    padding: 7px;
+    width: 25px;
+    height: 24px;
+    background-image: url(@/assets/icon/dropdown.png);
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+/* Phần chứa button thao tác */
+.main-top-action {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-add-context {
+    top: 36px;
+}
+
+/* Phần chính chứa bảng dữ liệu của main-content */
+.main-body {
+    height: 100%;
+    width: calc(100% - 266px);
+    flex: 1;
+    padding: 0 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+}
+
+.main-body-container {
+    height: calc(100% - 68px + 24px);
+    display: flex;
+    gap: 16px;
+}
+
+/* Phần thao táo với bảng dữ liệu */
+.table-toolbar {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    gap: 16px;
+}
+
+.main-body:has(.list-filter) .table-toolbar {
+    padding-bottom: unset;
+}
+
+.table-toolbar-left {
+    height: 100%;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex: 1;
+    overflow: auto;
+}
+
+.table-toolbar-left::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+
+.table-toolbar-right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 100%;
+}
+
+.btn-export-context {
+    top: 40px;
+}
+
+.table-toolbar-left .total-checked {
+    flex-shrink: 0;
+}
+
+.table-toolbar-left .btn-delete {
+    background-color: #bdbdbd;
+    flex-shrink: 0;
+}
+
+.table-toolbar-left .btn-delete:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.table-toolbar-left .btn-delete:active {
+    color: #fff;
+    background-color: #757575;
+}
+
+.table-toolbar-left .btn-delete span {
+    background-image: url(@/assets/icon/delete.png);
+}
+
+.table-toolbar-left .btn-cancel {
+    color: #eb3333;
+    background-color: inherit;
+    border: unset;
+    flex-shrink: 0;
+}
+
+.table-toolbar-left .btn-cancel:hover {
+    background-color: inherit;
+    color: #f59999;
+}
+
+.table-toolbar-left .btn-cancel:active {
+    border: unset;
+    color: #b80000;
+}
+
+.list-filter {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    overflow: auto;
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+}
+
+.list-filter::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+
+.btn-clear-all-filter {
+    cursor: pointer;
+    height: 30px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: sticky;
+    right: 0;
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.btn-clear-all-filter:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-clear-all-filter:active {
+    background-color: #e0e0e0;
+}
+
+.btn-clear-all-filter p {
+    font-family: Roboto-Medium;
+    color: #e60000;
+}
+
+.textfield-search-employee {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.table-toolbar-right .btn-export-container {
+    position: relative;
+}
+
+.table-toolbar-right .btn-export {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+}
+
+.table-toolbar-right .btn-export:hover {
+    background-color: #eeeeee;
+}
+
+.table-toolbar-right .btn-export span {
+    background-image: url(@/assets/icon/export-black_24.png);
+}
+
+.table-toolbar-right .btn-export:active {
+    background: #bdbdbd;
+}
+
+.table-toolbar-right .btn-export.active {
+    border: 1px solid var(--primary-color);
+    background-color: #eef8ec;
+}
+
+.table-toolbar-right .btn-export.active span {
+    background-image: url(@/assets/icon/export-green_24.png);
+}
+
+.table-toolbar-right .btn-refresh {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+}
+
+.table-toolbar-right .btn-refresh:hover {
+    background-color: #eeeeee;
+}
+.table-toolbar-right .btn-refresh span {
+    background-image: url(@/assets/icon/reload-black_32.png);
+}
+
+.table-toolbar-right .btn-refresh:active {
+    background: #bdbdbd;
+}
+
+.table-toolbar-right .btn-filter {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+}
+
+.table-toolbar-right .btn-filter:hover {
+    background-color: #eeeeee;
+}
+.table-toolbar-right .btn-filter span {
+    background-image: url(@/assets/icon/filter-black_24.png);
+}
+
+.table-toolbar-right .btn-filter:active {
+    background: #bdbdbd;
+}
+
+.table-toolbar-right .btn-filter.active {
+    border: 1px solid var(--primary-color);
+    background-color: #eef8ec;
+}
+
+.table-toolbar-right .btn-filter.active span {
+    background-image: url(@/assets/icon/filter-active-green_24.png);
+}
+
+.table-toolbar-right .menu-col {
+    position: relative;
+}
+
+.table-toolbar-right .btn-setting-column {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+}
+
+.table-toolbar-right .btn-setting-column:hover {
+    background-color: #eeeeee;
+}
+
+.table-toolbar-right .btn-setting-column span {
+    background-image: url(@/assets/icon/setting.png);
+}
+
+.table-toolbar-right .btn-setting-column.active-setting-column {
+    border: 1px solid var(--primary-color);
+    background-color: #eef8ec;
+}
+
+.table-toolbar-right .btn-setting-column.active-setting-column span {
+    background-image: url(@/assets/icon/setting-green_24.png);
+}
+
+/* Phần chứa bảng dữ liệu */
+.main-body-content {
+    height: calc(100% - 130px);
+}
+
+/* Phần dưới cùng của main-content */
+.table-footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 32px);
+    height: 56px;
+    box-sizing: border-box;
+    border-top: 1px solid var(--border-color);
+}
+
+.table-total-record {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto-Medium;
+}
+
+.table-total-record span,
+.table-total-record p {
+    font-family: inherit;
+}
+
+.table-container {
+    position: relative;
+    background-color: #fff;
+    overflow: auto;
+    width: 100%;
+    height: calc(100vh - 280px);
+}
+
+.main-body:has(.list-filter) .table-container {
+    height: calc(100vh - 320px);
+}
+
+.notification-no-record {
+    font-family: Roboto-Medium;
+    font-size: 16px;
+    position: sticky;
+    top: 60px;
+    left: 0;
+    text-align: center;
+}
+
+.table-pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.m-dropdown-page input {
+    padding-right: 20px !important;
+    width: 3ch !important;
+}
+
+.page-info p {
+    padding: 0 12px;
+}
+
+.pagination-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-page-prev,
+.btn-page-next {
+    padding: 2px;
+    width: 24px;
+    height: 24px;
+    background-clip: content-box;
+    background-size: contain;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.btn-page-prev {
+    background-image: url(@/assets/icon/btn-prev-page.svg);
+}
+
+.btn-page-next {
+    background-image: url(@/assets/icon/btn-next-page.svg);
+}
+
+.disable-link {
+    opacity: 0.3;
+    cursor: not-allowed;
+}

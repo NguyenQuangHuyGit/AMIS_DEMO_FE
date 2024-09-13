@@ -1,0 +1,108 @@
+.m-filter-menu {
+    position: relative;
+    height: 100%;
+    width: 240px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 16px 0;
+    box-sizing: border-box;
+}
+
+.m-filter-menu .m-filter-menu-title {
+    padding: 0 16px;
+}
+
+.m-filter-menu .m-filter-menu-title p {
+    font-family: Roboto-Bold;
+    font-size: 22px;
+}
+
+.m-filter-menu .m-filter-menu-title .close-icon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.m-filter-menu-title .close-icon:hover {
+    background-color: #e0e0e0;
+}
+
+.m-filter-menu-title .close-icon:active {
+    opacity: 0.7;
+}
+
+.m-filter-menu-title .close-icon span {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-image: url(@/assets/icon/close-black_24.png);
+}
+
+.m-filter-menu .m-filter-menu-search {
+    padding: 10px 16px;
+}
+
+.m-filter-menu .m-filter-menu-body {
+    overflow: auto;
+    height: calc(100% - 56px - 75px);
+    padding: 0 16px;
+}
+
+.m-filter-menu-body::-webkit-scrollbar:vertical {
+    width: 6px;
+}
+
+.m-filter-menu-body .m-filter-item-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 48px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.m-filter-menu-body .m-filter-item-container input {
+    width: 16px;
+    height: 16px;
+    accent-color: #409330;
+    cursor: pointer;
+}
+
+.m-filter-menu-body .m-filter-item-container p {
+    font-family: Roboto-Medium;
+}
+
+.m-filter-menu-body .m-filter-item-control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* .m-filter-item-option {
+    height: 36px;
+} */
+
+.m-filter-menu .m-filter-menu-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 8px;
+    height: 56px;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid var(--border-color);
+    align-items: center;
+    width: 100%;
+    left: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    border-radius: 0 0 4px 4px;
+}

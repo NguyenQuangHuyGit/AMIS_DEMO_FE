@@ -1,0 +1,49 @@
+.customer-popup-control {
+    display: grid;
+    row-gap: 16px;
+    box-sizing: border-box;
+    grid-template-columns: auto;
+    width: 100%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 20% 25% 0px 25% 1fr;
+    column-gap: 8px;
+    width: 100%;
+}
+
+/* .customer-input-code div {
+    height: 36px;
+    position: relative;
+} */
+
+.customer-input-birth {
+    grid-column: 4/5;
+    box-sizing: border-box;
+}
+
+.customer-input-phone,
+.customer-input-email {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.customer-input-identify {
+    grid-column: 4/5;
+    box-sizing: border-box;
+}
+
+.customer-input-group {
+    grid-column: 4/6;
+}
+
+.customer-input-dept {
+    grid-column: 1 / 6;
+    width: 25%;
+}
+
+.customer-input-company,
+.customer-input-address {
+    grid-column: 1 / 6;
+}

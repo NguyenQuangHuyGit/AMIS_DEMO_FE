@@ -1,0 +1,26 @@
+.error-title {
+    text-align: center;
+    font-family: Roboto-Bold;
+    font-size: 50px;
+    color: var(--primary-color);
+}
+
+.error-container {
+    margin: 30px 30px;
+}
+
+.error-description {
+    text-align: center;
+    font-size: 18px;
+    font-family: Roboto-Medium;
+}
+
+.coming-soon-btn {
+    text-align: center;
+    margin-top: 16px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
